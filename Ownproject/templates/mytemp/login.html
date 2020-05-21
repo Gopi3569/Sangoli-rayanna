@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static  %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Login </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/new.css' %}">
+</head>
+<body>
+<nav class="navbar navbar-default" >
+    <ul class="nav navbar-nav navbar-right">
+        <li></li>
+        <li><a class='glyphicon glyphicon-user' href="{% url 'Newapp:register' %}"> SignUp</a></li>
+        <li><a class="navbar-link" ></a></li>
+    </ul>
+</nav>
+<h4>"Welcome to Sangolli Rayanna Yuvakara Balaga"</h4>
+<h1>Log in:</h1>
+<div class="container">
+    <div class="jumbotron">
+        <form method="POST">
+         {% csrf_token%}
+          <label for="username">Username:</label><br>
+          <input type="text" name="username" value="" required><br>
+          <label for="password">Password:</label><br>
+          <input type="password" name="password" value="" required><br>
+            <p></p>
+          <input type="submit" class="btn btn-primary">
+        </form>
+    </div>
+    {%for i in messages%}
+    <h1>*{{i}}</h1>
+    {% endfor %}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends 'mytemp/basic.html' %}
+{% block body_block %}
+{% load static %}
+<h1>Ganesha festival Photos (2017)</h1>
+<div class="row">
+    <div class="col-lg-4 col-xs-8 thumbnail"><img src="{% static 'image/part1.JPG' %}" alt="" ></div>
+    <div class="col-lg-4 col-xs-8 thumbnail"><img src="{% static 'image/part2.JPG' %}" alt="" ></div>
+    <div class="col-lg-4 col-xs-8 thumbnail"><img src="{%static 'image/part3.JPG' %}" alt="" ></div>
+    <div class="col-lg-4 col-xs-8 thumbnail"><img src="{% static 'image/part4.JPG'%}" alt="" ></div>
+    <div class="col-lg-4 col-xs-8 thumbnail"><img src="{% static 'image/part5.JPG' %}" alt="" ></div>
+    <div class="col-lg-4 col-xs-8 thumbnail"><img src="{% static 'image/part6.JPG' %}" alt="" ></div>
+</div>
+{% endblock %}
+

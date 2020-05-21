@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1>Sign up!!</h1>
+    <div class="jumbotron">
+        <form  method="POST">
+            {% csrf_token %}
+            <label for="firstname" >First name: </label>
+            <input type="text" name="firstname" value="" required><br>
+            <p></p>
+            <label for="lastname" >Last name: </label>
+            <input type="text" name="lastname" value="" required><br>
+            <p></p>
+            <label for="username" >User name: </label>
+            <input type="text" name="username" value="" required><br>
+            <p></p>
+            <label for="email">Email: </label>
+            <input type="email" name="email" required><br>
+            <p></p>
+            <label for="password">Password: </label>
+            <input type="password" name="password" required><br>
+            <p></p>
+            <label for="cpassword">Confirm password: </label>
+            <input type="password" name="cpassword" required><br>
+            <p></p>
+            <input type="submit" class="btn btn-primary">
+        </form>
+    </div>
+    {%for i in messages%}
+    <h1>*{{i}}</h1>
+    {% endfor %}
+</div>
+
+</body>
+</html>

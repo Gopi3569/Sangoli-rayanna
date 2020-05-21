@@ -1,0 +1,85 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Sangoli Rayana</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Photos</a></li>
+      <li><a href="#">Achivements</a></li>
+      <li><a class="nav navbar-nav navbar-right" href="{% url 'Newapp:user_logout' %}">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def logout(request):
+    auth.logout(request)
+    return redirect('/')
+
+
+
+
+create_user(first_name=firstname,last_name=lastname,username=username,email=email,password=password)
